@@ -15,10 +15,10 @@ namespace Baigiamasis_darbas_Mathscientific
             ChromeOptions options = new ChromeOptions();
             //options.AddArgument("--start-maximized");
             //driver value yra <IWebDriver>
-            options.AddArgument("--window-size=1600,1000");
+            //options.AddArgument("--window-size=1600,1000");
 
             driver.Value = new ChromeDriver(options); // kreipiames i driver objekta virsuje, uzsetinam
-            //driver.Value.Manage().Window.Maximize();
+            driver.Value.Manage().Window.Maximize();
             driver.Value.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);  // laukimas
         }
 
