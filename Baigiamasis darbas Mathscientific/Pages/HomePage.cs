@@ -7,6 +7,13 @@
             Driver.open("https://mathscientific.com/lt/");
         }
 
+        public static void closeCokies()
+        {
+            string locator = "//*[@id='CybotCookiebotDialog' and contains(@class,'CybotCookiebotDialogActive')]//*[@id='CybotCookiebotDialogBodyButtonDecline']";
+            Common.waitForElementToBeVisible(locator);
+            Common.clickElement(locator);
+        }
+
         public static void hoverMouseOnLanguageSymbol()
         {
             string locator = "//*[@id='menu-language-switcher']";

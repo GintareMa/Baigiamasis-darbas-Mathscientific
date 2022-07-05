@@ -55,7 +55,7 @@
   <ItemGroup>
     <Compile Include="BaseClasses\Basetests.cs" />
     <Compile Include="Home.cs" />
-    <Compile Include="ShopingCard.cs" />
+    <Compile Include="ShoppingCard.cs" />
     <Compile Include="MyAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
