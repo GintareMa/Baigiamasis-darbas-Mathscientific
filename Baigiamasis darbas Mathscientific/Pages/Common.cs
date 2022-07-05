@@ -1,6 +1,8 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
-
+using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
+using System;
 
 namespace Baigiamasis_darbas_Mathscientific.Pages
 {
@@ -32,6 +34,12 @@ namespace Baigiamasis_darbas_Mathscientific.Pages
         internal static string getElementText(string locator)
         {
             return getElement(locator).Text;
+        }
+
+        internal static void waitForElementToBeVisible(string locator)
+        {
+            WebDriverWait wait = new WebDriverWait(Driver.getDriver(), TimeSpan.FromSeconds(10));
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(locator)));
         }
     }
 }
