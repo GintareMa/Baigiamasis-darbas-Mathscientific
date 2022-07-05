@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Baigiamasis_darbas_Mathscientific.Pages
+﻿namespace Baigiamasis_darbas_Mathscientific.Pages
 {
     public class MyAccountPage
     {
@@ -37,6 +31,37 @@ namespace Baigiamasis_darbas_Mathscientific.Pages
             string locator = "//*[@id='content']//*[text()=' Paskyra su tokiu el.pašto adresu jau yra sukurta. ']";
             //*[@id="content"]/div/div/div[1]/ul/li/text()
             return Common.getElementText(locator);
+        }
+
+        public static void enterUserName(string name)
+        {
+            string locator = "//*[@id='username']";
+            Common.sendKeysToElement(locator, name);
+        }
+
+        public static void enterLoginPassword(string name)
+        {
+            string locator = "//*[@id='password']";
+            Common.sendKeysToElement(locator, name);                
+        }
+
+        public static string readLoginConfirmationMessage()
+        {
+            string locator = "//*[@class='navbar__user-area__login']";
+            return Common.getElementText(locator);
+        }
+
+        public static void clickLogoutButton()
+        {
+            string locator = "//*[@id='content']//*[text()='Atsijungti']";
+            //*[@id="content"]/div/div/nav/ul/li[7]/a
+            Common.clickElement(locator);
+        }
+
+        public static void clickLoginButton()
+        {
+            string locator = "//*[@name='login']";
+            Common.clickElement(locator);
         }
     }
 }
