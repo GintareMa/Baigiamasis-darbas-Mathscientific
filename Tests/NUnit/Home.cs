@@ -13,17 +13,16 @@ namespace Tests.NUnit
             //HomePage.closeCokies();
         }
 
-        [Test]
+        [Test, Order (1)]
         public static void switchLanguagefromLtToEn()
         {
-            string excpectedMessage = "Log In";
             HomePage.hoverMouseOnLanguageSymbol();
             HomePage.clickButtonToChoseInternationlLanguage();
             string actualMessage = HomePage.readEnglishLoginName();
-            Assert.AreEqual(excpectedMessage, actualMessage);
+            Assert.IsTrue(actualMessage.Contains("Log In"));
         }
 
-        [Test]
+        [Test, Order (2)]
         public static void openMenu()
         {
             string expectedChoosedMenuText = "Mokslas";
