@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using Tests.BaseClasses;
 
-namespace Tests
+namespace Tests.NUnit
 {
     public class Home : Basetests
     {
@@ -10,9 +10,7 @@ namespace Tests
         public static void openPage()
         {
             HomePage.open();
-
-            //HomePage.clickCloseSuscriberButtonWhichEnabledAfter15sec();
-            //HomePage.closeCokiesWithButtonOnlyEssentials();
+            //HomePage.closeCokies();
         }
 
         [Test]

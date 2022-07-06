@@ -11,9 +11,7 @@ namespace Tests.BaseClasses
         public static void setup()
         {
             Driver.setDriver();
-        }
-
-        
+        }       
 
         [TearDown]
         public static void close()
@@ -23,7 +21,7 @@ namespace Tests.BaseClasses
                 Driver.takeScreenshot();
             }
 
-            Driver.closeDriver();
+             Driver.closeDriver();
         }
     }
 }

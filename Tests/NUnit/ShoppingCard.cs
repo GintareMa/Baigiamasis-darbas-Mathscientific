@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using Tests.BaseClasses;
 
-namespace Tests
+namespace Tests.NUnit
 {
     public class ShoppingCard : Basetests
     {

@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using Tests.BaseClasses;
 
-namespace Tests
+namespace Tests.NUnit
 {
     public class MyAccount : Basetests
     {
@@ -20,6 +20,7 @@ namespace Tests
             string registrationPassword = "KatinasSuo01!";
             string expectedMessage = "Klaida: Paskyra su tokiu el.pašto adresu jau yra sukurta. Prisijunkite.";
             MyAccountPage.navigateToRegistrationPage();
+            HomePage.closeCokies();
             MyAccountPage.enterEmail(registrationEmail);
             MyAccountPage.enterPassword(registrationPassword);
             MyAccountPage.clickRegistrationButton();
@@ -34,6 +35,7 @@ namespace Tests
             string loginPassword = "KatinasSuo01!";
             string expectedMessageAfterLogin = "Mano paskyra";
             MyAccountPage.navigateToRegistrationPage();
+            HomePage.closeCokies();
             MyAccountPage.enterUserName(loginEmail);
             MyAccountPage.enterLoginPassword(loginPassword);
             MyAccountPage.clickLoginButton();

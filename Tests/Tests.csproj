@@ -54,9 +54,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseClasses\Basetests.cs" />
-    <Compile Include="Home.cs" />
-    <Compile Include="ShoppingCard.cs" />
-    <Compile Include="MyAccount.cs" />
+    <Compile Include="NUnit\Home.cs" />
+    <Compile Include="NUnit\ShoppingCard.cs" />
+    <Compile Include="NUnit\MyAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
