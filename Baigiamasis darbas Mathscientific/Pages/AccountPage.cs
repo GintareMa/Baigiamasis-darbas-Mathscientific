@@ -1,8 +1,10 @@
-﻿namespace Baigiamasis_darbas_Mathscientific.Pages
+﻿using System;
+
+namespace Baigiamasis_darbas_Mathscientific.Pages
 {
-    public class MyAccountPage
+    public class AccountPage
     {
-        public static void navigateToRegistrationPage()
+        public static void navigateToLoginPage()
         {
             string locator = "//*[@class='navbar__user-area__login']";
             Common.clickElement(locator);

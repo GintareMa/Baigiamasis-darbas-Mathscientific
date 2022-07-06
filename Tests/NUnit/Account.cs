@@ -4,7 +4,7 @@ using Tests.BaseClasses;
 
 namespace Tests.NUnit
 {
-    public class MyAccount : Basetests
+    public class Account : Basetests
     {
         [SetUp]
         public static void openPage()
@@ -19,12 +19,12 @@ namespace Tests.NUnit
             string registrationEmail = "saule@saule.lt";
             string registrationPassword = "KatinasSuo01!";
             string expectedMessage = "Klaida: Paskyra su tokiu el.pašto adresu jau yra sukurta. Prisijunkite.";
-            MyAccountPage.navigateToRegistrationPage();
+            AccountPage.navigateToLoginPage();
             HomePage.closeCokies();
-            MyAccountPage.enterEmail(registrationEmail);
-            MyAccountPage.enterPassword(registrationPassword);
-            MyAccountPage.clickRegistrationButton();
-            string actualMessage = MyAccountPage.readErrorMessage();
+            AccountPage.enterEmail(registrationEmail);
+            AccountPage.enterPassword(registrationPassword);
+            AccountPage.clickRegistrationButton();
+            string actualMessage = AccountPage.readErrorMessage();
             Assert.AreEqual(expectedMessage, actualMessage);
         }
 
@@ -34,15 +34,15 @@ namespace Tests.NUnit
             string loginEmail = "saule@saule.lt";
             string loginPassword = "KatinasSuo01!";
             string expectedMessageAfterLogin = "Mano paskyra";
-            MyAccountPage.navigateToRegistrationPage();
+            AccountPage.navigateToLoginPage();
             HomePage.closeCokies();
-            MyAccountPage.enterUserName(loginEmail);
-            MyAccountPage.enterLoginPassword(loginPassword);
-            MyAccountPage.clickLoginButton();
-            string actualMessage = MyAccountPage.readLoginConfirmationMessage();
-            Assert.AreEqual(expectedMessageAfterLogin, actualMessage);
+            AccountPage.enterUserName(loginEmail);
+            AccountPage.enterLoginPassword(loginPassword);
+            AccountPage.clickLoginButton();
+            string actualMessage = AccountPage.readLoginConfirmationMessage();
+            Assert.AreEqual(expectedMessageAfterLogin, actualMessage, "Login is wrong or Enter wasnt completed");
 
-            MyAccountPage.clickLogoutButton();
+            AccountPage.clickLogoutButton();
         }
     }
 }
