@@ -22,7 +22,7 @@
 - Hover mouse on "Meniu"
 - Check if in "Meniu" content are category "Mokslas"
 
-### 2. SeaChange language from LT to International
+### 2. Change language from LT to International
 - Open https://mathscientific.com/lt/
 - Hover mouse on language symbol
 - Click to choose International language
