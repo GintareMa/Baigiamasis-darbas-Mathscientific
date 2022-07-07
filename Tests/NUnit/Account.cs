@@ -10,7 +10,6 @@ namespace Tests.NUnit
         public static void openPage()
         {
             HomePage.open();
-            //HomePage.closeCokies();
         }
 
         [Test]

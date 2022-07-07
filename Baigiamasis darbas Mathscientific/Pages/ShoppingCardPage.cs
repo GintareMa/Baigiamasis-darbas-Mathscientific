@@ -22,16 +22,9 @@
 
         public static string readMessageInBasket()
         {
-                //string locator = "//*[@class='add-to-cart__wrapper']//span";
-                //string locator = "//*[@class='added-to-cart-msg__text' and text()='Produktas sėkmingai įdėtas į krepšelį.']";
-                string locator = "//*[text()='Produktas sėkmingai įdėtas į krepšelį.']";
-                Common.waitForElementToBeVisible(locator);
-                //*[contains(text(),'Produktas sėkmingai įdėtas į krepšelį')]";
-                //*[@class='added-to-cart-msg__text']";
-                //*[contains(text(),'Produktas sėkmingai įdėtas į krepšelį')]
-                //span[@class='added-to-cart-msg__text']"
-
-                return Common.getElementText(locator);
+            string locator = "//*[text()='Produktas sėkmingai įdėtas į krepšelį.']";
+            Common.waitForElementToBeVisible(locator);
+            return Common.getElementText(locator);
         }
 
         public static void addProductSuAvietemisToShoppCard()

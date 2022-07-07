@@ -10,7 +10,6 @@ namespace Tests.NUnit
         public static void openPage()
         {
             HomePage.open();
-            //HomePage.closeCokies();
         }
 
         [Test]
@@ -24,6 +23,7 @@ namespace Tests.NUnit
             ShoppingCardPage.cklickOnTheKolagenasSuAvietemis();
             ShoppingCardPage.addProductSuAvietemisToShoppCard();
             string actualMessage = ShoppingCardPage.readMessageInBasket();
+
             Assert.AreEqual(expectedMessage, actualMessage);
         }
     }
