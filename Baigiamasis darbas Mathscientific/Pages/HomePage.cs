@@ -1,4 +1,6 @@
-﻿namespace Baigiamasis_darbas_Mathscientific.Pages
+﻿using System;
+
+namespace Baigiamasis_darbas_Mathscientific.Pages
 {
     public class HomePage
     {
@@ -76,15 +78,6 @@
             Common.sendKeysToElement(locator, name);
         }
 
-        public static void enterEmail(string email)
-        {
-            string locator = "//input[@name='omnisend-email']";
-            //*[@id="soundest-form-image-right-field-7Y5gZcUuxig7dEFuGfLBeEnJKv8JqmyFII0M"]
-
-            Common.waitForElementToBeCkilkable(locator);
-            Common.sendKeysToElement(locator, email);
-        }
-
         public static string readTextFromChoosedMenu()
         {
             string locator = "//*[@id='menu-item-154']//a[@href='#']";
@@ -95,6 +88,15 @@
         {
             string locator = "//*[@class='main-navigation__toggler-content']";
             Common.clickElement(locator);
+        }
+
+        public static void enterEmail()
+        { 
+            Random r = new Random();
+            string locator = "//input[@name='omnisend-email']";
+            string email = String.Format($"katinas{r.Next(1000)}@gmail.com");
+            Common.waitForElementToBeCkilkable(locator);
+            Common.sendKeysToElement(locator, email);
         }
     }
 }

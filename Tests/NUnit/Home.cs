@@ -36,12 +36,10 @@ namespace Tests.NUnit
         [Test]
         public static void joinToSubscribersClub()
         {
-            int num = 1;
-            num++;
-            string email = "katinas" + num + "@gmail.com";
             string name = "Saule";
+
             string expectedSubscriberMessage = "Dėkojame, kad prenumeruojate mūsų naujienas!";
-            HomePage.enterEmail(email);
+            HomePage.enterEmail();
             HomePage.enterName(name);
             HomePage.cklickOnSkinType();
             HomePage.cklickOnNormaliOda();
