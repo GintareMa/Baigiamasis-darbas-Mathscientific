@@ -41,5 +41,11 @@ namespace Baigiamasis_darbas_Mathscientific.Pages
             WebDriverWait wait = new WebDriverWait(Driver.getDriver(), TimeSpan.FromSeconds(10));
             wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(locator)));
         }
+
+        internal static void waitForElementToBeCkilkable(string locator)
+        {
+            WebDriverWait wait = new WebDriverWait(Driver.getDriver(), TimeSpan.FromSeconds(30));
+            wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(locator)));
+        }
     }
 }

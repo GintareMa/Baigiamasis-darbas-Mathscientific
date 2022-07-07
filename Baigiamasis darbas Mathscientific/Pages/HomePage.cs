@@ -39,6 +39,52 @@
             
         }
 
+        public static void cklickOnNormaliOda()
+        {
+            string locator = "//select[@class='soundest-form-image-right-field-dropdown']/option[2]";
+            //string locator = "//option[@value='Normali oda']";
+            Common.clickElement(locator);
+        }
+
+        public static string readConfirmationMessageAfterSubscribe()
+        {
+            string locator = "//*[@class='soundest-form-image-right-headline soundest-form-image-right-state-success-subscribed']";
+            return Common.getElementText(locator);
+        }
+
+        public static void closeSubscriberWindow()
+        {
+            string locator = "//*[@class='soundest-form-image-right-close']";
+            Common.clickElement(locator);
+        }
+
+        public static void cklickButtonSubscribeNewsletter()
+        {
+            string locator = "//input[@class='soundest-form-image-right-submit']";
+            Common.clickElement(locator);
+        }
+
+        public static void cklickOnSkinType()
+        {
+            string locator = "//select[@class='soundest-form-image-right-field-dropdown']";
+            Common.clickElement(locator);
+        }
+
+        public static void enterName(string name)
+        {
+            string locator = "//input[@name='omnisend-name']";
+            Common.sendKeysToElement(locator, name);
+        }
+
+        public static void enterEmail(string email)
+        {
+            string locator = "//input[@name='omnisend-email']";
+            //*[@id="soundest-form-image-right-field-7Y5gZcUuxig7dEFuGfLBeEnJKv8JqmyFII0M"]
+
+            Common.waitForElementToBeCkilkable(locator);
+            Common.sendKeysToElement(locator, email);
+        }
+
         public static string readTextFromChoosedMenu()
         {
             string locator = "//*[@id='menu-item-154']//a[@href='#']";
