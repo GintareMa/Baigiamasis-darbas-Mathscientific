@@ -18,7 +18,6 @@ namespace Tests.NUnit
             string expectedMessage = "Produktas sėkmingai įdėtas į krepšelį.";
 
             HomePage.moveMouseOnMenu();
-            ShoppingCardPage.moveMouseOnMaistoPapildai();
             ShoppingCardPage.cklickOnKolagenasFromTheList();
             ShoppingCardPage.cklickOnTheKolagenasSuAvietemis();
             ShoppingCardPage.addProductSuAvietemisToShoppCard();

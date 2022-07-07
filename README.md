@@ -47,7 +47,7 @@
 ### 5. Add one porduct: Kolagenas Su Avietemis to the shopping card
 - Open https://mathscientific.com/lt/
 - Hover mouse on "Meniu"
-- Cklick on "Maisto Papildai"
+- Cklick on "Kolagenas"
 - Click on "Kolagenas su Avietėmis"
 - Add product to the shopping card
 - Check if displayed message: "Produktas sėkmingai įdėtas į krepšelį."

@@ -2,12 +2,6 @@
 {
     public class ShoppingCardPage
     {
-        public static void moveMouseOnMaistoPapildai()
-        {
-            string locator = "//*[@id='menu-item-62457']/a";
-            Common.performHoverMouse(locator);
-        }
-
         public static void cklickOnKolagenasFromTheList()
         {
             string locator = "//*[@id='menu-item-62473']";

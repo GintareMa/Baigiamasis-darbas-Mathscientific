@@ -10,8 +10,6 @@ namespace Tests.NUnit
         public static void openPage()
         {
             HomePage.open();
-            HomePage.hoverMouseOnLanguageSymbol();
-            HomePage.clickButtonToChoseInternationlLanguage();
         }
 
         [Test]

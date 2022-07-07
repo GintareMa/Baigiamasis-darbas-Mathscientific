@@ -10,8 +10,6 @@ namespace Tests.NUnit
         public static void openPage()
         {
             HomePage.open();
-            HomePage.hoverMouseOnLanguageSymbol();
-            HomePage.clickButtonToChoseInternationlLanguage();
         }
 
         [Test, Order (1)]
@@ -19,8 +17,8 @@ namespace Tests.NUnit
         {
             HomePage.hoverMouseOnLanguageSymbol();
             HomePage.clickButtonToChoseInternationlLanguage();
-            //string actualMessage = HomePage.readEnglishLoginName();
-            //Assert.IsTrue(actualMessage.Contains("Log In"));
+            string actualMessage = HomePage.readEnglishLoginName();
+            Assert.IsTrue(actualMessage.Contains("Log In"));
         }
 
         [Test, Order (2)]
