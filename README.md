@@ -53,6 +53,7 @@
 - Check if displayed message: "Produktas sėkmingai įdėtas į krepšelį."
 
 ### 6. Join to subscribers Club
+'Prisijungti prie prenumeratoriu, langas atsidaro kazkur po 20 sec'
 - Open https://mathscientific.com/lt/
 - Enter e-mail
 - Enter name
@@ -61,3 +62,6 @@
 - Click button "Prenumeruoti Naujinelaiškį"
 - Check if displayed message: "Dėkojame, kad prenumeruojate mūsų naujienas!"
 - Close subscriber window
+
+#### Testas kartais(daznai) atidaro puslapi anglu kalba, ir tuomet visi testai nuluzta, kol kas nepavyko issiaiskinti kodel
+#### Jei taip nutinka, tuomet i [Setup] galim iskelti du pirmus zingsnius is testo 'switchLanguageFromLtToEn' ir paleisti testus
