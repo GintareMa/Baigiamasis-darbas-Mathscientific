@@ -8,18 +8,16 @@ namespace Baigiamasis_darbas_Mathscientific
 {
     public class Driver
     {
-        private static ThreadLocal<IWebDriver> driver = new ThreadLocal<IWebDriver>(); // driverio objektas
+        private static ThreadLocal<IWebDriver> driver = new ThreadLocal<IWebDriver>();
 
         public static void setDriver()
         {
             ChromeOptions options = new ChromeOptions();
-            //options.AddArgument("--start-maximized");
-            //driver value yra <IWebDriver>
-            //options.AddArgument("--window-size=1600,1000");
+            options.AddArgument("--window-size=1600,1000");
 
-            driver.Value = new ChromeDriver(options); // kreipiames i driver objekta virsuje, uzsetinam
-            driver.Value.Manage().Window.Maximize();
-            driver.Value.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);  // laukimas
+            driver.Value = new ChromeDriver(options);
+ //           driver.Value.Manage().Window.Maximize(); paliktas lango pilnas ispletimas
+            driver.Value.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
 
         public static void takeScreenshot()
@@ -34,7 +32,7 @@ namespace Baigiamasis_darbas_Mathscientific
 
         public static IWebDriver getDriver()
         {
-            return driver.Value; // grazinam
+            return driver.Value;
         }
 
         public static void open(string url)
@@ -42,7 +40,7 @@ namespace Baigiamasis_darbas_Mathscientific
             driver.Value.Url = url;
         }
 
-        public static void closeDriver() // kreipiames i driver objekta isjungti
+        public static void closeDriver()
         {
             driver.Value.Quit();
         }

@@ -51,3 +51,13 @@
 - Click on "Kolagenas su Avietėmis"
 - Add product to the shopping card
 - Check if displayed message: "Produktas sėkmingai įdėtas į krepšelį."
+
+### 6. Join to subscribers Club
+- Open https://mathscientific.com/lt/
+- Enter e-mail
+- Enter name
+- Click on Skin Type
+- Click on skin type "Normali"
+- Click button "Prenumeruoti Naujinelaiškį"
+- Check if displayed message: "Dėkojame, kad prenumeruojate mūsų naujienas!"
+- Close subscriber window
