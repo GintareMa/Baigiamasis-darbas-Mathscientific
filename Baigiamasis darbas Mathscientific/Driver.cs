@@ -42,7 +42,7 @@ namespace Baigiamasis_darbas_Mathscientific
 
         public static void closeDriver()
         {
-            //driver.Value.Quit();
+            driver.Value.Quit();
         }
     }
 }
