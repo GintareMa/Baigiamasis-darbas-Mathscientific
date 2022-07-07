@@ -13,10 +13,10 @@ namespace Baigiamasis_darbas_Mathscientific
         public static void setDriver()
         {
             ChromeOptions options = new ChromeOptions();
-            options.AddArgument("--window-size=1600,1000");
+            //options.AddArgument("--window-size=1600,1000");
 
             driver.Value = new ChromeDriver(options);
- //           driver.Value.Manage().Window.Maximize(); paliktas lango pilnas ispletimas
+            driver.Value.Manage().Window.Maximize();
             driver.Value.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
 

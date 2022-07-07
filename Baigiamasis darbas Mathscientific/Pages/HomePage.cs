@@ -44,7 +44,6 @@ namespace Baigiamasis_darbas_Mathscientific.Pages
         public static void cklickOnNormaliOda()
         {
             string locator = "//select[@class='soundest-form-image-right-field-dropdown']/option[2]";
-            //string locator = "//option[@value='Normali oda']";
             Common.clickElement(locator);
         }
 
