@@ -23,7 +23,7 @@ namespace Baigiamasis_darbas_Mathscientific
         public static void takeScreenshot()
         {
             string screenshotsPath = $"{AppDomain.CurrentDomain.BaseDirectory}screenshots";
-            string screenshotName = $"{screenshotsPath}\\src-{Guid.NewGuid()}.png";
+            string screenshotName = $"{screenshotsPath}\\src-{DateTime.Now:HH_mm_ss}-{Guid.NewGuid()}.png";
 
             Directory.CreateDirectory(screenshotsPath);
             Screenshot screenshot = ((ITakesScreenshot)Driver.getDriver()).GetScreenshot();
@@ -42,7 +42,7 @@ namespace Baigiamasis_darbas_Mathscientific
 
         public static void closeDriver()
         {
-            driver.Value.Quit();
+            //driver.Value.Quit();
         }
     }
 }
